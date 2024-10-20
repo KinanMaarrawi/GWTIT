@@ -1,0 +1,64 @@
+/*using flex probably wasnt necessary, but wanted to play around with it*/
+/*also aligning everything and setting font*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*making the glass thing that actually holds all the content we want*/
+/*used an online tool to generate this*/
+.container {
+    background: rgba( 131, 140, 150, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    padding: 2rem;
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+/*styling for the displayed information below:*/
+.all_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather_info {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-area: 1 / 2 / 1 / 2;
+}
+
+.country_info {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+/*setting background gradient, also from online tool*/
+html {
+  background-image: linear-gradient(
+    20deg,
+    hsl(255deg 100% 50%) 0%,
+    hsl(247deg 97% 53%) 8%,
+    hsl(240deg 95% 55%) 17%,
+    hsl(232deg 91% 58%) 25%,
+    hsl(225deg 88% 60%) 33%,
+    hsl(217deg 84% 62%) 42%,
+    hsl(210deg 80% 64%) 50%,
+    hsl(202deg 75% 66%) 58%,
+    hsl(194deg 69% 69%) 67%,
+    hsl(187deg 63% 70%) 75%,
+    hsl(179deg 56% 72%) 83%,
+    hsl(172deg 49% 74%) 92%,
+    hsl(164deg 40% 76%) 100%
+  );
+}
